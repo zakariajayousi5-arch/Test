@@ -1,0 +1,350 @@
+```css
+/* ==========================
+   General
+========================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: "Cairo", Arial, sans-serif;
+    background: #f0f2f5;
+    color: #202124;
+    line-height: 1.7;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ==========================
+   Page
+========================== */
+
+.registration-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+
+.form-container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+
+/* ==========================
+   Header
+========================== */
+
+.form-header {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+
+.form-header-line {
+    height: 10px;
+    background: #154734;
+}
+
+
+.form-header-content {
+    padding: 30px;
+}
+
+
+.form-logo {
+    display: block;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+}
+
+
+.form-header h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #202124;
+}
+
+
+.form-header-content > p {
+    text-align: center;
+}
+
+
+.form-description {
+    margin-top: 20px;
+    color: #5f6368;
+    font-size: 15px;
+}
+
+
+.required-note {
+    margin-top: 20px;
+    color: #d93025 !important;
+    font-size: 13px;
+}
+
+
+/* ==========================
+   Form Cards
+========================== */
+
+.form-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+
+.form-card > label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #202124;
+}
+
+
+.required {
+    color: #d93025;
+    margin-right: 3px;
+}
+
+
+/* ==========================
+   Inputs
+========================== */
+
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #dadce0;
+    outline: none;
+    padding: 12px 4px;
+    background: transparent;
+    font-size: 15px;
+    color: #202124;
+    transition: border-color 0.2s ease;
+}
+
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-bottom-color: #154734;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: #9aa0a6;
+}
+
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+
+textarea:focus {
+    border: 2px solid #154734;
+}
+
+
+/* ==========================
+   Radio Buttons
+========================== */
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+.radio-option input {
+    width: 18px;
+    height: 18px;
+    accent-color: #154734;
+    cursor: pointer;
+}
+
+
+/* ==========================
+   Checkbox
+========================== */
+
+.agreement-card {
+    padding: 20px 30px;
+}
+
+
+.checkbox-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.checkbox-option input {
+    width: 18px;
+    height: 18px;
+    margin-top: 5px;
+    accent-color: #154734;
+    flex-shrink: 0;
+}
+
+
+/* ==========================
+   Buttons
+========================== */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.submit-button,
+.reset-button {
+    border: none;
+    border-radius: 6px;
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+.submit-button {
+    background: #154734;
+    color: #ffffff;
+}
+
+
+.submit-button:hover {
+    background: #0e3828;
+    transform: translateY(-1px);
+}
+
+
+.reset-button {
+    background: transparent;
+    color: #154734;
+}
+
+
+.reset-button:hover {
+    background: #e8f0ec;
+}
+
+
+/* ==========================
+   Footer
+========================== */
+
+.form-footer {
+    text-align: center;
+    padding: 25px;
+    color: #80868b;
+    font-size: 13px;
+}
+
+
+.form-footer p:first-child {
+    font-weight: 700;
+    color: #154734;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 600px) {
+
+    .registration-page {
+        padding: 15px 10px;
+    }
+
+
+    .form-header-content {
+        padding: 25px 20px;
+    }
+
+
+    .form-header h1 {
+        font-size: 25px;
+    }
+
+
+    .form-card {
+        padding: 20px;
+        margin-bottom: 12px;
+    }
+
+
+    .agreement-card {
+        padding: 20px;
+    }
+
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .submit-button,
+    .reset-button {
+        width: 100%;
+    }
+
+}
+```
