@@ -1,0 +1,428 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>التسجيل | مركز يقيني</title>
+
+    <meta
+        name="description"
+        content="استمارة التسجيل في مركز يقيني"
+    >
+<link rel="stylesheet" href="register.css">
+</head>
+
+
+<body>
+
+
+    <main class="registration-page">
+
+        <div class="form-container">
+
+
+            <!-- ==========================
+                 Header
+            =========================== -->
+
+            <header class="form-header">
+
+                <div class="form-header-line"></div>
+
+                <div class="form-header-content">
+
+                    <img
+                        src="logo.png"
+                        alt="مركز يقيني"
+                        class="form-logo"
+                    >
+
+                    <h1>
+                        استمارة التسجيل
+                    </h1>
+
+                    <p>
+                        مركز يقيني
+                    </p>
+
+                    <p class="form-description">
+
+                        نرحب بكم في مركز يقيني.
+                        يرجى تعبئة البيانات التالية للتسجيل
+                        في برامج وأنشطة المركز.
+
+                    </p>
+
+                    <p class="required-note">
+                        * يشير إلى سؤال مطلوب
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ==========================
+                 Registration Form
+            =========================== -->
+
+            <form
+                action="#"
+                method="post"
+                class="registration-form"
+            >
+
+
+                <!-- الاسم -->
+
+                <div class="form-card">
+
+                    <label for="student-name">
+
+                        اسم المشارك
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="student-name"
+                        name="student-name"
+                        placeholder="اكتب اسم المشارك الكامل"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- العمر -->
+
+                <div class="form-card">
+
+                    <label for="age">
+
+                        العمر
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <select
+                        id="age"
+                        name="age"
+                        required
+                    >
+
+                        <option value="" disabled selected>
+                            اختر العمر
+                        </option>
+
+                        <option value="5">5 سنوات</option>
+                        <option value="6">6 سنوات</option>
+                        <option value="7">7 سنوات</option>
+                        <option value="8">8 سنوات</option>
+                        <option value="9">9 سنوات</option>
+                        <option value="10">10 سنوات</option>
+                        <option value="11">11 سنة</option>
+                        <option value="12">12 سنة</option>
+                        <option value="13">13 سنة</option>
+                        <option value="14">14 سنة</option>
+                        <option value="15">15 سنة</option>
+                        <option value="16">16 سنة</option>
+                        <option value="17">17 سنة</option>
+                        <option value="18">18 سنة</option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- اسم ولي الأمر -->
+
+                <div class="form-card">
+
+                    <label for="guardian-name">
+
+                        اسم ولي الأمر
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="guardian-name"
+                        name="guardian-name"
+                        placeholder="اكتب اسم ولي الأمر"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- رقم الهاتف -->
+
+                <div class="form-card">
+
+                    <label for="phone">
+
+                        رقم هاتف ولي الأمر
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="مثال: 07XXXXXXXX"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- البرنامج -->
+
+                <div class="form-card">
+
+                    <label>
+
+                        البرنامج المراد التسجيل فيه
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <div class="radio-group">
+
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="program"
+                                value="courses"
+                                required
+                            >
+
+                            <span>
+                                الدورات العملية
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="program"
+                                value="educational"
+                            >
+
+                            <span>
+                                المجالس العلمية والتربوية
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="program"
+                                value="activities"
+                            >
+
+                            <span>
+                                الأنشطة الشبابية
+                            </span>
+
+                        </label>
+
+
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="program"
+                                value="summer"
+                            >
+
+                            <span>
+                                البرامج الصيفية
+                            </span>
+
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- الجنس -->
+
+                <div class="form-card">
+
+                    <label>
+
+                        الجنس
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <div class="radio-group">
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="male"
+                                required
+                            >
+
+                            <span>
+                                ذكر
+                            </span>
+
+                        </label>
+
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="female"
+                            >
+
+                            <span>
+                                أنثى
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ملاحظات -->
+
+                <div class="form-card">
+
+                    <label for="notes">
+
+                        ملاحظات إضافية
+                    </label>
+
+                    <textarea
+                        id="notes"
+                        name="notes"
+                        rows="5"
+                        placeholder="اكتب أي معلومات أو ملاحظات ترغب بإضافتها..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- الموافقة -->
+
+                <div class="form-card agreement-card">
+
+                    <label class="checkbox-option">
+
+                        <input
+                            type="checkbox"
+                            name="agreement"
+                            required
+                        >
+
+                        <span>
+
+                            أقر بصحة البيانات المدخلة،
+                            وأوافق على التواصل معي بخصوص
+                            التسجيل في برامج مركز يقيني.
+
+                            <span class="required">
+                                *
+                            </span>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- Buttons -->
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        إرسال التسجيل
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="reset-button"
+                    >
+                        مسح النموذج
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+            <!-- Footer -->
+
+            <footer class="form-footer">
+
+                <p>
+                    مركز يقيني
+                </p>
+
+                <p>
+                    علمٌ يقيني... يحفظ يقيني... حتى يقيني
+                </p>
+
+            </footer>
+
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
+```
