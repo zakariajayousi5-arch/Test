@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Card</title>
+    <style>
+        /* Base Styling & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f7f5f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Single Main Container Card */
+        .main-stats-card {
+            background-color: #ffffff;
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* 4-Column Layout Grid (Responsive) */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Individual Stat Item Box */
+        .stat-item {
+            background-color: #1b4332; /* Deep Forest Green */
+            border-radius: 16px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(27, 67, 50, 0.15);
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                        box-shadow 0.3s ease, 
+                        background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover Animation Effects */
+        .stat-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(27, 67, 50, 0.3);
+            background-color: #143326; /* Slightly darker green on hover */
+        }
+
+        /* Big Numbers (+500, +50, etc.) */
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #d4af37; /* Warm Gold tone */
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        /* Text Labels (Below the numbers) */
+        .stat-label {
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design: Adapts to Tablets & Mobile Screens */
+        @media (max-width: 900px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2x2 layout on tablets */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .stats-grid {
+                grid-template-columns: 1fr; /* Stack into 1 column on mobile phones */
+            }
+            .main-stats-card {
+                padding: 20px;
+            }
+            .stat-item {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Single Unified Main Card -->
+    <div class="main-stats-card">
+        <div class="stats-grid">
+            
+            <!-- Item 1: +10 -->
+            <div class="stat-item">
+                <span class="stat-number">+10</span>
+                <div class="stat-label">سنوات من العطاء</div>
+            </div>
+
+            <!-- Item 2: +100 -->
+            <div class="stat-item">
+                <span class="stat-number">+100</span>
+                <div class="stat-label">فعالية</div>
+            </div>
+
+            <!-- Item 3: +50 -->
+            <div class="stat-item">
+                <span class="stat-number">+50</span>
+                <div class="stat-label">برنامج</div>
+            </div>
+
+            <!-- Item 4: +500 -->
+            <div class="stat-item">
+                <span class="stat-number">+500</span>
+                <div class="stat-label">مشارك</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Optional JavaScript for Dynamic Interactive Micro-Animations -->
+    <script>
+        document.querySelectorAll('.stat-item').forEach(item => {
+            // Slight tilt effect when mouse enters
+            item.addEventListener('mouseenter', () => {
+                item.style.borderColor = '#e5c158';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.borderColor = 'transparent';
+            });
+        });
+    </script>
+</body>
+</html>
