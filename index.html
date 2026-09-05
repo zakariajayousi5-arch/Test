@@ -1,429 +1,147 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Card</title>
+    <style>
+        /* Base Styling & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+        body {
+            background-color: #f7f5f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-    <title>التسجيل | مركز يقيني</title>
+        /* Single Main Container Card */
+        .main-stats-card {
+            background-color: #ffffff;
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            max-width: 1000px;
+            width: 100%;
+        }
 
-    <meta
-        name="description"
-        content="استمارة التسجيل في مركز يقيني"
-    >
-<link rel="stylesheet" href="register.css">
+        /* 4-Column Layout Grid (Responsive) */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Individual Stat Item Box */
+        .stat-item {
+            background-color: #1b4332; /* Deep Forest Green */
+            border-radius: 16px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(27, 67, 50, 0.15);
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                        box-shadow 0.3s ease, 
+                        background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover Animation Effects */
+        .stat-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(27, 67, 50, 0.3);
+            background-color: #143326; /* Slightly darker green on hover */
+        }
+
+        /* Big Numbers (+500, +50, etc.) */
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #d4af37; /* Warm Gold tone */
+            margin-bottom: 12px;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        /* Text Labels (Below the numbers) */
+        .stat-label {
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design: Adapts to Tablets & Mobile Screens */
+        @media (max-width: 900px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2x2 layout on tablets */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .stats-grid {
+                grid-template-columns: 1fr; /* Stack into 1 column on mobile phones */
+            }
+            .main-stats-card {
+                padding: 20px;
+            }
+            .stat-item {
+                padding: 30px 15px;
+            }
+        }
+    </style>
 </head>
-
-
 <body>
 
-
-    <main class="registration-page">
-
-        <div class="form-container">
-
-
-            <!-- ==========================
-                 Header
-            =========================== -->
-
-            <header class="form-header">
-
-                <div class="form-header-line"></div>
-
-                <div class="form-header-content">
-
-                    <img
-                        src="logo.png"
-                        alt="مركز يقيني"
-                        class="form-logo"
-                    >
-
-                    <h1>
-                        استمارة التسجيل
-                    </h1>
-
-                    <p>
-                        مركز يقيني
-                    </p>
-
-                    <p class="form-description">
-
-                        نرحب بكم في مركز يقيني.
-                        يرجى تعبئة البيانات التالية للتسجيل
-                        في برامج وأنشطة المركز.
-
-                    </p>
-
-                    <p class="required-note">
-                        * يشير إلى سؤال مطلوب
-                    </p>
-                    <a href="test.html>Redrict</a>
-
-                </div>
-
-            </header>
-
-
-
-            <!-- ==========================
-                 Registration Form
-            =========================== -->
-
-            <form
-                action="#"
-                method="post"
-                class="registration-form"
-            >
-
-
-                <!-- الاسم -->
-
-                <div class="form-card">
-
-                    <label for="student-name">
-
-                        اسم المشارك
-                        <span class="required">*</span>
-
-                    </label>
-
-                    <input
-                        type="text"
-                        id="student-name"
-                        name="student-name"
-                        placeholder="اكتب اسم المشارك الكامل"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- العمر -->
-
-                <div class="form-card">
-
-                    <label for="age">
-
-                        العمر
-                        <span class="required">*</span>
-
-                    </label>
-
-                    <select
-                        id="age"
-                        name="age"
-                        required
-                    >
-
-                        <option value="" disabled selected>
-                            اختر العمر
-                        </option>
-
-                        <option value="5">5 سنوات</option>
-                        <option value="6">6 سنوات</option>
-                        <option value="7">7 سنوات</option>
-                        <option value="8">8 سنوات</option>
-                        <option value="9">9 سنوات</option>
-                        <option value="10">10 سنوات</option>
-                        <option value="11">11 سنة</option>
-                        <option value="12">12 سنة</option>
-                        <option value="13">13 سنة</option>
-                        <option value="14">14 سنة</option>
-                        <option value="15">15 سنة</option>
-                        <option value="16">16 سنة</option>
-                        <option value="17">17 سنة</option>
-                        <option value="18">18 سنة</option>
-
-                    </select>
-
-                </div>
-
-
-
-                <!-- اسم ولي الأمر -->
-
-                <div class="form-card">
-
-                    <label for="guardian-name">
-
-                        اسم ولي الأمر
-                        <span class="required">*</span>
-
-                    </label>
-
-                    <input
-                        type="text"
-                        id="guardian-name"
-                        name="guardian-name"
-                        placeholder="اكتب اسم ولي الأمر"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- رقم الهاتف -->
-
-                <div class="form-card">
-
-                    <label for="phone">
-
-                        رقم هاتف ولي الأمر
-                        <span class="required">*</span>
-
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="مثال: 07XXXXXXXX"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- البرنامج -->
-
-                <div class="form-card">
-
-                    <label>
-
-                        البرنامج المراد التسجيل فيه
-                        <span class="required">*</span>
-
-                    </label>
-
-
-                    <div class="radio-group">
-
-
-                        <label class="radio-option">
-
-                            <input
-                                type="radio"
-                                name="program"
-                                value="courses"
-                                required
-                            >
-
-                            <span>
-                                الدورات العملية
-                            </span>
-
-                        </label>
-
-
-
-                        <label class="radio-option">
-
-                            <input
-                                type="radio"
-                                name="program"
-                                value="educational"
-                            >
-
-                            <span>
-                                المجالس العلمية والتربوية
-                            </span>
-
-                        </label>
-
-
-
-                        <label class="radio-option">
-
-                            <input
-                                type="radio"
-                                name="program"
-                                value="activities"
-                            >
-
-                            <span>
-                                الأنشطة الشبابية
-                            </span>
-
-                        </label>
-
-
-
-                        <label class="radio-option">
-
-                            <input
-                                type="radio"
-                                name="program"
-                                value="summer"
-                            >
-
-                            <span>
-                                البرامج الصيفية
-                            </span>
-
-                        </label>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- الجنس -->
-
-                <div class="form-card">
-
-                    <label>
-
-                        الجنس
-                        <span class="required">*</span>
-
-                    </label>
-
-
-                    <div class="radio-group">
-
-                        <label class="radio-option">
-
-                            <input
-                                type="radio"
-                                name="gender"
-                                value="male"
-                                required
-                            >
-
-                            <span>
-                                ذكر
-                            </span>
-
-                        </label>
-
-
-                        <label class="radio-option">
-
-                            <input
-                                type="radio"
-                                name="gender"
-                                value="female"
-                            >
-
-                            <span>
-                                أنثى
-                            </span>
-
-                        </label>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- ملاحظات -->
-
-                <div class="form-card">
-
-                    <label for="notes">
-
-                        ملاحظات إضافية
-                    </label>
-
-                    <textarea
-                        id="notes"
-                        name="notes"
-                        rows="5"
-                        placeholder="اكتب أي معلومات أو ملاحظات ترغب بإضافتها..."
-                    ></textarea>
-
-                </div>
-
-
-
-                <!-- الموافقة -->
-
-                <div class="form-card agreement-card">
-
-                    <label class="checkbox-option">
-
-                        <input
-                            type="checkbox"
-                            name="agreement"
-                            required
-                        >
-
-                        <span>
-
-                            أقر بصحة البيانات المدخلة،
-                            وأوافق على التواصل معي بخصوص
-                            التسجيل في برامج مركز يقيني.
-
-                            <span class="required">
-                                *
-                            </span>
-
-                        </span>
-
-                    </label>
-
-                </div>
-
-
-
-                <!-- Buttons -->
-
-                <div class="form-actions">
-
-                    <button
-                        type="submit"
-                        class="submit-button"
-                    >
-                        إرسال التسجيل
-                    </button>
-
-                    <button
-                        type="reset"
-                        class="reset-button"
-                    >
-                        مسح النموذج
-                    </button>
-
-                </div>
-
-
-            </form>
-
-
-            <!-- Footer -->
-
-            <footer class="form-footer">
-
-                <p>
-                    مركز يقيني
-                </p>
-
-                <p>
-                    علمٌ يقيني... يحفظ يقيني... حتى يقيني
-                </p>
-
-            </footer>
-
+    <!-- Single Unified Main Card -->
+    <div class="main-stats-card">
+        <div class="stats-grid">
+            
+            <!-- Item 1: +10 -->
+            <div class="stat-item">
+                <span class="stat-number">+10</span>
+                <div class="stat-label">سنوات من العطاء</div>
+            </div>
+
+            <!-- Item 2: +100 -->
+            <div class="stat-item">
+                <span class="stat-number">+100</span>
+                <div class="stat-label">فعالية</div>
+            </div>
+
+            <!-- Item 3: +50 -->
+            <div class="stat-item">
+                <span class="stat-number">+50</span>
+                <div class="stat-label">برنامج</div>
+            </div>
+
+            <!-- Item 4: +500 -->
+            <div class="stat-item">
+                <span class="stat-number">+500</span>
+                <div class="stat-label">مشارك</div>
+            </div>
 
         </div>
+    </div>
 
-    </main>
-
-
+    <!-- Optional JavaScript for Dynamic Interactive Micro-Animations -->
+    <script>
+        document.querySelectorAll('.stat-item').forEach(item => {
+            // Slight tilt effect when mouse enters
+            item.addEventListener('mouseenter', () => {
+                item.style.borderColor = '#e5c158';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.borderColor = 'transparent';
+            });
+        });
+    </script>
 </body>
-
 </html>
-```
